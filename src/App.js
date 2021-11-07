@@ -145,10 +145,14 @@ function App() {
               </p>
             </div>
             <div className="column has-text-centered">
-              <div className="is-size-5">Accuracy :</div>
-              <p className="has-text-info is-size-1">
-                {Math.round((correct / (correct + incorrect)) * 100)} %
-              </p>
+              <p className="is-size-5">Accuracy:</p>
+              {correct !== 0 ? (
+                <p className="has-text-info is-size-1">
+                  {Math.round((correct / (correct + incorrect)) * 100)}%
+                </p>
+              ) : (
+                <p className="has-text-info is-size-1">0%</p>
+              )}
             </div>
           </div>
         </div>
